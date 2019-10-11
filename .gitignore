@@ -1,3 +1,4 @@
-.txt
-.xsl
-.xsls
+*.txt 
+*.xsl 
+
+*.xsls
