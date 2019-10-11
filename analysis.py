@@ -16,7 +16,7 @@ def loadStopWords(file):
 
 def getTokenizedTextWithoutStopWords(text, language):
     tokens = nltk.word_tokenize(text, language)
-    stop_words = loadStopWords("C:/Users/Tuccc/Desktop/Анализ данных/stopwords.json")
+    stop_words = loadStopWords("stopwords.json")
     return [w for w in tokens if not w in stop_words]
 
 def getNormalizedWords(words):
@@ -51,4 +51,4 @@ if __name__ == "__main__":
         tokens = getTokenizedTextWithoutStopWords(clear_text, 'russian')
         normalized_words = getNormalizedWords(tokens)
         sorted_counts = getSortedWordsWithFrequency(normalized_words)
-        exportResults(r'C:/Users/Tuccc/Desktop/Анализ данных/output.xlsx', sorted_counts)
+        exportResults(r'output.xlsx', sorted_counts)
